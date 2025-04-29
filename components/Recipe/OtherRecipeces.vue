@@ -22,7 +22,6 @@ const recipes = computed(() => {
       <p class="text-red-600">Sorry, no recipes found now. Please try again later!</p>
     </div>
 
-
     <div v-else>
       <div class="flex flex-col gap-6">
         <div v-for="recipe in recipes" :key="recipe.id" class="w-full max-w-[400px] h-[120px] flex gap-2">
