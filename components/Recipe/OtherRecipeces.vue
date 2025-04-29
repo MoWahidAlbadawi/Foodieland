@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Recipe } from '~/composables/Types.ts/recipe';
+import noImage from '~/assets/images/image-not-found.jpg';
 
 const { $recipes, $error, $pending } = useNuxtApp();
 
@@ -26,7 +27,7 @@ const recipes = computed(() => {
       <div class="flex flex-col gap-6">
         <div v-for="recipe in recipes" :key="recipe.id" class="w-full max-w-[400px] h-[120px] flex gap-2">
           
-          <img :src="recipe.photoUrl" class="w-[180px] object-cover rounded-xl" />
+          <img :src="recipe.photoUrl ? recipe.photoUrl : noImage" class="w-[180px] object-cover rounded-xl" />
             <div>
           <h2 class="text-xl font-bold my-2"><NuxtLink :to="`/recipes/${recipe.id}`">{{ recipe.title }}</NuxtLink></h2>
           <p class="text-gray-500 text-md">by Mohammad Albadawi</p>

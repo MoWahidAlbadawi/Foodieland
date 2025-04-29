@@ -2,12 +2,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', 'vuetify-nuxt-module','@nuxtjs/google-fonts'],
   css: ['/assets/mian.css'],
   ssr: true,
+
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700] 
     },
     display: 'swap'
   },
+
   app : {
   head: {
     link: [
@@ -17,5 +19,7 @@ export default defineNuxtConfig({
       }
     ]
   }
-}
+},
+
+  compatibilityDate: '2025-04-29'
 });

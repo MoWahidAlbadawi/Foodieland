@@ -18,23 +18,23 @@ watchEffect(() => {
                 <div class="flex flex-col gap-2 text-[18px]">
                     <div class="flex justify-between items-center border-b border-gray-300 pb-2">
                         <p class="text-gray-500">Calories</p>
-                        <p>{{ recipe.calories }}kcal</p>
+                        <p>{{ recipe.calories || 0 }} kcal</p>
                     </div>
                     <div class="flex justify-between items-center border-b border-gray-300 pb-2">
                         <p class="text-gray-500">Total Fat</p>
-                        <p>{{ recipe.fat }}</p>
+                        <p>{{ recipe.fat || 0 }}</p>
                     </div>
                     <div class="flex justify-between items-center border-b border-gray-300 pb-2">
                         <p class="text-gray-500">Protein</p>
-                        <p>{{ recipe.protein }}</p>
+                        <p>{{ recipe.protein || 0 }}</p>
                     </div>
                     <div class="flex justify-between items-center border-b border-gray-300 pb-2">
                         <p class="text-gray-500">Carbohydrates</p>
-                        <p>{{ recipe.carbohydrate }}</p>
+                        <p>{{ recipe.carbohydrate || 0 }}</p>
                     </div>
                     <div class="flex justify-between items-center border-b border-gray-300 pb-2">
                         <p class="text-gray-500">Cholesterol</p>
-                        <p>{{ recipe.cholesterol }}</p>
+                        <p>{{ recipe.cholesterol || 0 }}</p>
                     </div>
                 </div>
                 </div>
