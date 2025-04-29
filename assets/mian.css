@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 350px;
+    margin: 0;
+    padding : 0;
+    font-family: 'Inter', sans-serif;
+}
+  
+.device-image-title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.secondary-home-title {
+    line-height: 1.3;
+}
+.veg-img-1 {
+    filter: drop-shadow(0 25px 30px rgb(116, 101, 101));
+}
+.veg-img-2 {
+    filter: drop-shadow(0 25px 30px rgb(64, 153, 64));
+}
+.veg-img-3 {
+    filter: drop-shadow(0 25px 30px rgb(243,111,111));
+}
+.veg-img-4 {
+    filter: drop-shadow(0 25px 30px rgb(236, 184, 86));
+}
+.veg-img-5 {
+    filter: drop-shadow(0 25px 30px rgb(233, 203, 103));
+}
+.veg-img-6 {
+    filter: drop-shadow(0 25px 30px rgb(243, 111, 111));
+}
+.device-photo {
+    background-image: url('/assets/images/advice.png');
+}
+
+.lorem-details-recipe {
+    position: relative;
+}
+.lorem-details-recipe::before {
+    content: "";
+    position: absolute;
+    top : 7px;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #c9bbbb;
+}
+@media (max-width: 800px) {
+    .lorem-details-recipe::before {
+        left: 1%;
+
+    }
+}
+.animate-up-to-down {
+    animation: up-to-down 2s linear infinite; 
+}
+@keyframes up-to-down {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}   
