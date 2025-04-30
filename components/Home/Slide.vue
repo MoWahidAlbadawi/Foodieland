@@ -7,7 +7,7 @@
           <h4 class="font-bold text-lg">Hot Recipes</h4>
         </div>
   
-        <h2 class="text-3xl lg:text-5xl 2xl:text-7xl font-bold lg:w-full xl:w-3/4">
+        <h2 class="text-3xl lg:text-5xl xl:text-[50px] 2xl:!text-[70px] font-bold lg:w-full xl:w-3/4">
           Spicy delicious chicken wings
         </h2>
   

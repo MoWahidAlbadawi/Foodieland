@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-col gap-5 md:flex-row md:justify-between lg:justify-center md:px-36 items-center pb-12 mt-5 md:relative">
             <div>
-                <p>2025 , Flowbase , Powred by Webflow</p>
+                <p>2025 , Flowbase , Powred by <span class="text-orange-400">Webflow</span></p>
             </div>
             <div>
             <ul class="text-xl flex gap-5 md:absolute md:top-0 md:right-40">
