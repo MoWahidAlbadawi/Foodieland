@@ -11,9 +11,9 @@ const recipes = computed(() => {
 </script>
 
 <template>
-  <section class="my-32 sm:mx-20 sm:mx-4 md:mx-12 lg:mx-4 xl:mx-32 ">
+  <section class="mt-36">
     
-    <div class="flex flex-col md:gap-12 md:flex-row justify-between mb-8 text-center md:text-start">
+    <div class="flex flex-col md:gap-12 md:flex-row justify-between mb-8 md:text-start">
       <h2 class="text-xl md:text-2xl xl:text-4xl font-bold mb-3 md:w-1/2 2xl:w-1/3">
         Try this delicious recipes to make your day
       </h2>
@@ -25,7 +25,7 @@ const recipes = computed(() => {
   
     <div v-if="$recipesPending">
       <v-row>
-        <v-col v-for="n in 6" :key="n" cols="12" sm="6" md="3">
+        <v-col v-for="n in 6" :key="n" cols="12" sm="6" md="4">
           <v-skeleton-loader :elevation="10" type="card" />
         </v-col>
       </v-row>
@@ -40,13 +40,13 @@ const recipes = computed(() => {
     <div v-else>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <div v-for="recipe in recipes" :key="recipe.id" class="w-full max-w-[290px] mx-auto h-[350px] flex flex-col">
-          
+          <NuxtLink :to="`/recipes/${recipe.id}`">
           <img :src="recipe.photoUrl" class="w-full h-[200px] object-cover rounded-xl" />
 
-          <h2 class="text-xl font-bold my-4"><NuxtLink :to="`/recipes/${recipe.id}`">{{ recipe.title }}</NuxtLink></h2>
+          <h2 class="text-[18px] font-bold mt-4 h-[70px]">{{ recipe.title }}</h2>
 
           <div class="flex gap-2 mt-auto">
-            <div class="flex items-center gap-2 py-2 px-4 rounded-xl">
+            <div class="flex items-center gap-2 py-2 rounded-xl">
               <IconsClock />
               <p class="text-gray-500 text-sm">30 Minutes</p>
             </div>
@@ -55,7 +55,7 @@ const recipes = computed(() => {
               <p class="text-gray-500 text-sm">Chicken</p>
             </div>
           </div>
-
+          </NuxtLink>
         </div>
       </div>
     </div>

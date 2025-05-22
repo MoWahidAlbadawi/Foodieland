@@ -7,7 +7,7 @@
           <h4 class="font-bold text-lg">Hot Recipes</h4>
         </div>
   
-        <h2 class="text-3xl lg:text-5xl xl:text-[50px] 2xl:!text-[70px] font-bold lg:w-full xl:w-3/4">
+        <h2 class="text-3xl lg:text-5xl xl:text-[50px] 2xl:!text-[60px] 2xl:mt-5 font-bold lg:w-full xl:w-3/4">
           Spicy delicious chicken wings
         </h2>
   
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-0 lg:gap-4 xl:gap-0 justify-between items-start sm:items-center lg:items-start xl:items-center">
             <div class="flex gap-2">
                 <v-avatar>
                 <v-img
@@ -39,7 +39,7 @@
                     <p class="text-gray-500">19 April 2025</p>
                 </div>
             </div>
-            <button class="flex xl:gap-2 cursor-pointer bg-black text-white p-3 sm:p-5 sm:px-8  md:p-3 xl:p-5 md:px-2 xl:px-8 rounded-xl">
+            <button class="flex xl:g  ap-2 cursor-pointer bg-black text-white p-3 px-8 rounded-xl">
                 <p class="mt-1">View Recipces</p>
                 <p><IconsView /></p>
             </button>

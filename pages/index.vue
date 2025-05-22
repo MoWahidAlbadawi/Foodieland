@@ -9,7 +9,7 @@ useHead({
 </script>
 
 <template>
-    <section>
+    <section class="md:w-[90%] mx-auto">
         <HomeSlides />
 
         <HomeCategories />

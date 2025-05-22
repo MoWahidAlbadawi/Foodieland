@@ -2,7 +2,7 @@
 const route = useRoute();
 const recipeId = route.params.id;
 
-const { data: recipe, error, pending } = await useAsyncData('recipe', () => 
+const { data: recipe, error, pending } = useAsyncData('recipe', () => 
   $fetch(`https://api.sampleapis.com/recipes/recipes/${recipeId}`)
 );
 
@@ -12,8 +12,8 @@ watchEffect(() => {
     useHead({
       title: recipe.value.title,
       meta: [
-        { name: 'description', content: `${recipe.value.title} recipe` },
-        { name: 'keywords', content: 'recipes, cooking, food, chicken recipes, easy meals, healthy recipes, quick dinners' },
+        { name: 'description', content: `${recipe.value.description}` },
+        { name: 'keywords', content: `${recipe.value.title} recipes, cooking, food, chicken recipes, easy meals, healthy recipes, quick dinners` },
       ],
     });
   }
@@ -21,17 +21,16 @@ watchEffect(() => {
 </script>
 
 <template>
-  <section>
-    <section class="md:w-[90%] mx-auto">
-      <div v-if="pending" class="text-center py-10">
+    <div v-if="pending" class="text-center py-10">
         Loading...
-      </div>
+  </div>
 
-      <div v-else-if="error" class="text-center py-10 text-red-500">
+    <div v-else-if="error" class="text-center py-10 text-red-500">
         {{ error }}
-      </div>
+     </div>
 
-      <div v-else>
+    <section v-else class="w-[95%] md:w-[90%] mx-auto">
+      <div >
         <RecipeHeader :recipe="recipe" />
 
         <RecipeInfo :recipe="recipe" />
@@ -39,8 +38,7 @@ watchEffect(() => {
 
       <RecipeIngredients />
       <RecipeDirections />
-    </section>
-
+    
     <ContactUs />
     <RecipeSimilar />
   </section>

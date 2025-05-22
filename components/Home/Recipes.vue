@@ -20,8 +20,7 @@ const filteredRecipes = computed(() => {
 </script>
 
 <template>
-  <section class="my-10 mx-2 sm:mx-4 md:mx-12 lg:mx-4 xl:mx-32"> 
-    
+  <section class="mt-36"> 
     <div class="text-center mb-8">
       <h2 class="text-xl md:text-2xl xl:text-4xl font-bold mb-3">Simple and tasty recipes</h2>
       <p class="text-gray-500 text-lg md:text-xl">
@@ -62,11 +61,24 @@ const filteredRecipes = computed(() => {
         <div
           v-for="recipe in filteredRecipes"
           :key="recipe.id"
-          class="w-full max-w-[350px] 2xl:max-w-[450px] h-[430px] bg-gradient-to-b from-[#E7F9FD00] to-[#E7F9FD] rounded-xl px-4 flex flex-col mx-auto"
+          class="w-full max-w-[350px] 2xl:max-w-[450px] h-[434px] bg-gradient-to-b from-[#E7F9FD00] to-[#E7F9FD] rounded-xl px-4 flex flex-col mx-auto relative"
         >
+        <NuxtLink :to="`/recipes/${recipe.id}`">
+          <!-- icon favoirate-->
+           <!-- <div v-if="recipe.favoirate" class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
+            <IconsFavoirate />
+           </div>
+           <div v-else class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
+            <IconsNoFavoirate />
+           </div> -->
+           <div class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
+            <IconsFavoirate />
+           </div>
           <img :src="recipe.photoUrl" class="w-full h-[250px] object-cover rounded-2xl" />
 
-          <h2 class="text-lg sm:text-[24px] font-bold my-4"><NuxtLink :to="`/recipes/${recipe.id}`">{{ recipe.title }}</NuxtLink></h2>
+          <h2 class="text-xl  lg:text-[17px] 2xl:text-xl font-bold mt-8 h-[70px]">
+            {{ recipe.title }}
+          </h2>
 
           <div class="flex">
             <div class="flex items-center gap-2 py-3 px-5 rounded-xl">
@@ -78,7 +90,7 @@ const filteredRecipes = computed(() => {
               <p class="text-gray-500 text-sm">Chicken</p>
             </div>
           </div>
-
+          </NuxtLink>
         </div>
       </transition-group>
       <div class="text-center">

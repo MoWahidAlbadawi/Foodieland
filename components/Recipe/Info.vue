@@ -41,6 +41,6 @@ watchEffect(() => {
                 <p class="text-gray-500">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div> 
         </div>
-        <p class="text-gray-500 mt-20 lg:!w-3/4 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-gray-500 mt-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae autem pariatur iste libero, totam ut dolorum suscipit quidem sapiente voluptatibus sed sunt asperiores doloribus ab corporis? Iste vitae corporis laudantium quod eum placeat minus, ad doloribus enim et, cumque architecto, quia id accusantium sint corrupti provident quasi dolorum nulla natus. Iste, repellat porro ullam qui ipsum aspernatur! Commodi ipsam rerum quos consequatur? Optio reiciendis qui non aut, culpa quasi corrupti vitae nesciunt atque commodi modi nobis aspernatur porro! Dolorem, amet?</p>
     </div>
 </template>

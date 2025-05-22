@@ -5,7 +5,7 @@ import 'swiper/css';
 </script>
 
 <template>
-  <section class="mx-2 sm:!mx-4 md:!mx-12 lg:!mx-4 xl:!mx-32">
+  <section>
 <Swiper
   :modules="[Autoplay]"
   :slidesPerView="'auto'"

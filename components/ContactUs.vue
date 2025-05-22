@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[#E7F9FD] rounded-xl h-[500px] sm:h-[442px] py-24 xl:py-20 2xl:p-24 relative mx-2 sm:!mx-4 md:!mx-12 lg:!mx-4 xl:!mx-32">
+    <section class="mt-36 bg-[#E7F9FD] rounded-xl h-[500px] sm:h-[442px] py-24 xl:py-20 2xl:p-24 relative mx-2">
         <div class="flex flex-col gap-5 justify-center items-center text-center">
             <h2 class="text-4xl font-bold">Deliciousness to your Inbox</h2>
             <p class="text-gray-500 text-lg max-w-[600px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sit exercitationem natus earum reiciendis architecto!</p>

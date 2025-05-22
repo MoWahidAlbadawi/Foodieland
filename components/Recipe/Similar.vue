@@ -26,10 +26,10 @@ const recipes = computed(() => ($recipes as Recipe[]).slice(0, 4));
     <div v-else>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <div v-for="recipe in recipes" :key="recipe.id" class="w-full max-w-[290px] mx-auto h-[350px] flex flex-col">
-          
+          <NuxtLink :to="`/recipes/${recipe.id}`">
           <img :src="recipe.photoUrl" class="w-full h-[200px] object-cover rounded-xl" />
 
-          <h2 class="text-xl font-bold my-4"><NuxtLink :to="`/recipes/${recipe.id}`">{{ recipe.title }}</NuxtLink></h2>
+          <h2 class="text-xl font-bold mt-4 h-[70px]">{{ recipe.title }}</h2>
 
           <div class="flex gap-2 mt-auto">
             <div class="flex items-center gap-2 py-2 px-4 rounded-xl">
@@ -41,7 +41,7 @@ const recipes = computed(() => ($recipes as Recipe[]).slice(0, 4));
               <p class="text-gray-500 text-sm">Chicken</p>
             </div>
           </div>
-
+          </NuxtLink>
         </div>
       </div>
     </div>

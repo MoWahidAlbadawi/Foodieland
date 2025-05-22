@@ -13,7 +13,7 @@ const posts = ref([
 </script>
 
 <template>
-    <section class="my-32 mx-2 sm:!px-4 md:!px-12 lg:!px-4 xl:!px-32 bg-gradient-to-b from-[white] pb-20 to-[#E7F9FD] ">
+    <section class="mt-36 bg-gradient-to-b from-[white] pb-20 to-[#E7F9FD] ">
         <div class="text-center mb-8">
             <h2 class="text-xl md:text-2xl xl:text-4xl font-bold mb-3">Check out @foodieland on Instagram</h2>
             <p class="text-gray-500 text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nostrum veritatis repellendus enim obcaecati ipsa.</p>
