@@ -40,7 +40,6 @@ function  toggleIsFavoirate(index : number) {
 
 <template>
   <section class="mt-36"> 
-    {{ isFavoirateRecipe }}
     <div class="text-center mb-8">
       <h2 class="text-xl md:text-2xl xl:text-4xl font-bold mb-3">Simple and tasty recipes</h2>
       <p class="text-gray-500 text-lg md:text-xl">
