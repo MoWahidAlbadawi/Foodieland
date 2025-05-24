@@ -9,7 +9,10 @@ const recipes = computed(() => {
  return list.slice(0, count.value + 9)
 }
 );
+
+const isFavoirateRecipe = ref<boolean[]>([]);
 const search = ref('');
+
 const filteredRecipes = computed(() => {
   if (search.value) {
     const list = $recipes as Recipe[];
@@ -17,10 +20,27 @@ const filteredRecipes = computed(() => {
   }
   return recipes.value;
 });
+
+function showMoreRecipes () {
+  count.value+=3;
+  isFavoirateRecipe.value.push(false);
+  isFavoirateRecipe.value.push(false);
+  isFavoirateRecipe.value.push(false);
+}
+
+
+onMounted(() => {
+  isFavoirateRecipe.value = new Array(filteredRecipes.value.length).fill(false);
+});
+
+function  toggleIsFavoirate(index : number) {
+  isFavoirateRecipe.value[index] = !isFavoirateRecipe.value[index];
+}
 </script>
 
 <template>
   <section class="mt-36"> 
+    {{ isFavoirateRecipe }}
     <div class="text-center mb-8">
       <h2 class="text-xl md:text-2xl xl:text-4xl font-bold mb-3">Simple and tasty recipes</h2>
       <p class="text-gray-500 text-lg md:text-xl">
@@ -59,21 +79,20 @@ const filteredRecipes = computed(() => {
       </div>
       <transition-group name="slide-up" tag="div" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12" appear>
         <div
-          v-for="recipe in filteredRecipes"
+          v-for="(recipe,index) in filteredRecipes"
           :key="recipe.id"
           class="w-full max-w-[350px] 2xl:max-w-[450px] h-[434px] bg-gradient-to-b from-[#E7F9FD00] to-[#E7F9FD] rounded-xl px-4 flex flex-col mx-auto relative"
         >
-        <NuxtLink :to="`/recipes/${recipe.id}`">
           <!-- icon favoirate-->
-           <!-- <div v-if="recipe.favoirate" class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
+           <div v-if="isFavoirateRecipe[index]" class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center cursor-pointer"
+            @click.stop="toggleIsFavoirate(index)">
             <IconsFavoirate />
            </div>
-           <div v-else class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
+           <div v-else class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center cursor-pointer"
+           @click.stop="toggleIsFavoirate(index)">
             <IconsNoFavoirate />
-           </div> -->
-           <div class="absolute top-[10px] right-[30px] bg-gray-100 w-[48px] h-[48px] rounded-[50%] flex justify-center items-center">
-            <IconsFavoirate />
-           </div>
+           </div> 
+          <NuxtLink :to="`/recipes/${recipe.id}`">
           <img :src="recipe.photoUrl" class="w-full h-[250px] object-cover rounded-2xl" />
 
           <h2 class="text-xl  lg:text-[17px] 2xl:text-xl font-bold mt-8 h-[70px]">
@@ -100,7 +119,7 @@ const filteredRecipes = computed(() => {
       <div class="flex justify-center gap-4 mt-8">
         <button
           class="cursor-pointer bg-black text-white text-xl rounded-lg px-6 py-3"
-          @click="count += 3"
+          @click="showMoreRecipes"
           v-if="recipes.length < ($recipes as Recipe[]).length && search.length === 0"
         >
           Show More
