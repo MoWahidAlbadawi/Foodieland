@@ -21,18 +21,16 @@ const filteredRecipes = computed(() => {
   return recipes.value;
 });
 
+onMounted(() => {
+  isFavoirateRecipe.value = new Array(filteredRecipes.value.length).fill(false);
+});
+
 function showMoreRecipes () {
   count.value+=3;
   isFavoirateRecipe.value.push(false);
   isFavoirateRecipe.value.push(false);
   isFavoirateRecipe.value.push(false);
 }
-
-
-onMounted(() => {
-  isFavoirateRecipe.value = new Array(filteredRecipes.value.length).fill(false);
-});
-
 function  toggleIsFavoirate(index : number) {
   isFavoirateRecipe.value[index] = !isFavoirateRecipe.value[index];
 }
