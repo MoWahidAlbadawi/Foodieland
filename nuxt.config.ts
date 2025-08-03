@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   // this for support vercel settings for deployment on vercel
   nitro : {
-    present : 'vercel'
+    preset : 'vercel'
   },
 
   googleFonts: {

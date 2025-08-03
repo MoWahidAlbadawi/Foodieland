@@ -7,7 +7,7 @@
                 <button class="cursor-pointer bg-black text-white  rounded-xl w-fit py-4 px-12 self-center lg:self-start lg:ms-6">Learn More</button>
             </div>
             <div class="bg-gradient-to-b from-[white] to-[#B0E3F0] lg:mt-12 rounded-xl relative w-[300px] sm:!w-[600px] h-[180px] sm:!h-[400px]">
-                    <img src="assets/images/chef/chef.png" class="absolute -top-[50%] "/>
+                    <img src="assets/images/Chef/chef.png" class="absolute -top-[50%] "/>
                 <!-- vegtables -->
              <img src="assets/images/chef/meat.png" class="absolute -top-[40%] sm:!-top-[25%] left-[5%] sm:!left-[5%] animate-up-to-down"/>
              <img src="assets/images/chef/tomato.png" class="absolute top-[65%] -left-[2%] animate-up-to-down"/>
