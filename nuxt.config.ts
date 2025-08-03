@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   css: ['/assets/mian.css'],
   ssr: true,
 
+  // this for support vercel settings for deployment on vercel
+  nitro : {
+    present : 'vercel'
+  },
+
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700] 
